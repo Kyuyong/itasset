@@ -1,38 +1,413 @@
-.App {
+body {
+  background-color: #f9f9f9;
+}
+
+.main-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  /* 가운데 정렬을 위해 좌우 마진을 자동으로 설정 */
+}
+
+.main-box {
+  height: 750px;
+  width: 100%;
+  /* z-index: 0; */
+}
+
+.main-navbar {
+  z-index: 2;
+  background-color: transparent;
+  /* 원하는 z-index 값 설정 */
+}
+
+.main-nav {
+  color: white;
+  font-family: "Noto Sans KR", Helvetica;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 15px;
+}
+
+.main-box .main-bg {
+  background: linear-gradient(100deg, rgb(41, 162, 208) 0%, rgb(119, 47, 201) 100%);
+  height: 750px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  /* z-index: -1; */
+
+}
+
+
+.logo {
+  color: white;
+  font-family: "Noto Sans KR", Helvetica;
+  font-size: 40px;
+  font-weight: 900;
+}
+
+.logo:hover {
+  color: #7236CA;
+}
+
+.main-text {
+  padding: 10px;
+  margin-top: 100px;
+  /* height: 100%; */
+  width: 100%;
+  position: relative;
+  color: white;
+
+}
+
+.main-introtext {
+  font-family: "Noto Sans KR", Helvetica;
+  font-weight: 100;
+  font-size: 36px;
+}
+
+.main-img {
+  height: 520px;
+  margin-left: 300px;
+  position: relative;
+}
+
+.vertical-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.search-form {
+  position: relative;
+  width: 75%;
+}
+
+
+/* 직군별 중간 선택 navbar */
+
+.middle-navbar {
+  height: 70px;
+  width: 100%;
+  background-color: #333333;
+  border-radius: 20px;
+  left: 0;
+  position: relative;
+  top: -35px;
+  width: 1600px;
+  font-size: 14px;
+  font-family: "Noto Sans KR", Helvetica;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.middle-box {
+  width: 120px;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.middle-menu-icon {
+  width: 120px;
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 100%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.middle-navbar .nav-link.active {
+  color: #585858;
+  background-color: white;
+  border-radius: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.middle-navbar .nav-link {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+.title-text {
+  color: #777777;
+  font-family: Noto Sans KR;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 350;
+  line-height: normal;
+  padding: 5px;
+  margin: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+/* ======== newsolution 항목 ======== */
+
+.newsolution-box {
+  width: 500px;
+  height: 100%;
+  margin: 10px;
+  background: url(/public/image/main/main01.png);
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  /* 세로로 배치 */
+  justify-content: center;
+  /* 수직 가운데 정렬 */
+  align-items: left;
+  /* 수평 가운데 정렬 */
+  text-align: left;
+  /* 텍스트 가운데 정렬 */
+  border-radius: 20px;
+}
+
+.box-text {
+  font-size: 24px;
+  font-family: "Noto Sans KR", Helvetica;
+  font-weight: 900;
+  color: white;
+  margin: 10px;
+  margin-left: 80px;
+
+}
+
+.box-textsub {
+  font-size: 16px;
+  font-family: "Noto Sans KR", Helvetica;
+  font-weight: 200;
+  color: white;
+  margin: 10px;
+  margin-left: 80px;
+}
+
+.newsolution-btn {
+  width: 150px;
+  background-color: white;
+  margin: 10px;
+  margin-left: 80px;
+  border-radius: 20px;
+}
+
+.newsolution-btn:hover {
+  background-color: #7236CA;
+  color: white;
+}
+
+.circle-img {
+  width: 80px;
+  height: 80px;
+  margin: 10px;
+  padding: 0px;
+  margin-left: 80px;
+}
+
+
+.solution-img {
+  width: 500px;
+  height: 100%;
+  margin: 10px;
+}
+
+
+.solution-title {
+  font-family: "Noto Sans KR", Helvetica;
+  font-weight: 900;
+  font-size: 30px;
+  padding: 0px;
+  margin: 0px;
+  margin-left: 10px;
+  color: #585858
+}
+
+.solution-title-fullname {
+  font-family: "Noto Sans KR", Helvetica;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 0px;
+  margin: 0px;
+  margin-left: 10px;
+  color: #585858
+}
+
+.solution-titlekr {
+  font-family: "Noto Sans KR", Helvetica;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 0px;
+  margin: 0px;
+  margin-left: 10px;
+  color: #585858
+}
+
+/* ======== main banner 정의 ======== */
+.main-banner {
+  margin: 10px;
+  width: 100%;
+  height: 442px;
+  border-radius: 20px;
+  background: url(/public/image/main/banner01.png);
+  display: flex;
+  flex-direction: column;
+  /* 세로로 배치 */
+  justify-content: center;
+  /* 수직 가운데 정렬 */
+  align-items: left;
+  /* 수평 가운데 정렬 */
+  text-align: left;
+  /* 텍스트 가운데 정렬 */
+}
+
+.banner-btn {
+  width: 150px;
+  background-color: #DD1B8F;
+  margin: 10px;
+  margin-left: 80px;
+  border-radius: 20px;
+}
+
+.banner-btn:hover {
+  background-color: #7236CA;
+  color: white;
+}
+
+.banner-line {
+  border: 1px solid white;
+  width: 400px;
+  margin-left: 80px;
+}
+
+/* ======== Most Popular AI/DT 정의 ======== */
+.mostpopular-box {
+  width: 500px;
+  height: 100%;
+  margin: 10px;
+  background: url(/public/image/main/main02.png);
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  /* 세로로 배치 */
+  justify-content: center;
+  /* 수직 가운데 정렬 */
+  align-items: left;
+  /* 수평 가운데 정렬 */
+  text-align: left;
+  /* 텍스트 가운데 정렬 */
+  border-radius: 20px;
+}
+
+.mostpopular-btn {
+  width: 150px;
+  background-color: white;
+  margin: 10px;
+  margin-left: 80px;
+  border-radius: 20px;
+}
+
+.mostpopular-btn:hover {
+  background-color: #0021E5;
+  color: white;
+}
+
+/* ======== joinus 정의 ======== */
+
+.joinus-title {
+  font-size: 50px;
+  font-family: "Noto Sans KR", Helvetica;
+  font-weight: 900;
+  color: #7135C9;
+  height: 75px;
+  margin: 0;
+  margin-bottom: 20px;
+
+}
+
+.joinus-box {
+  display: flex;
+  flex-direction: column;
+  /* 세로로 배치 */
+  justify-content: center;
+  align-items: center;
+  /* 수평 가운데 정렬 */
+  text-align: center;
+  /* 텍스트 가운데 정렬 */
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: -4px -4px 10px #0000001a, 4px 4px 10px #0000001a;
+  height: 360px;
+  width: 350px;
+  padding: 10px;
+  /* position: relative; */
+}
+
+
+
+
+.person-circle {
+  height: 100px;
+  left: 125px;
+  top: 36px;
+  width: 100px;
+  margin: 20px;
+}
+
+.person-name {
+  font-size: 20px;
+  font-family: "Noto Sans KR", Helvetica;
+  font-weight: 800;
+  color: #7236ca;
+  margin: 0px;
+}
+
+.person-team {
+  font-size: 14px;
+  font-family: "Noto Sans KR", Helvetica;
+  font-weight: 400;
+  color: #757575;
+  margin: 0px;
+}
+
+/* ======== footer 정의 ======== */
+.footermenu {
+  width: 120px;
+  color: white;
+  font-size: 12px;
+  font-family: 'Noto Sans KR', Helvetica;
+}
+
+.footermenu:hover {
+  font-size: 16px;
+  color: #333333;
+  background-color: #f9f9f9;
+  border-radius: 20px;
+}
+
+
+/* ======== gap 정의 ======== */
+.gap-60 {
+  clear: both;
+  height: 60px;
+}
+
+.gap-40 {
+  clear: both;
+  height: 40px;
+}
+
+.gap-30 {
+  clear: both;
+  height: 30px;
+}
+
+.gap-20 {
+  clear: both;
+  height: 20px;
 }
