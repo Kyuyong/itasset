@@ -9,7 +9,7 @@ body {
 }
 
 .main-box {
-  height: 750px;
+  height: 550px;
   width: 100%;
   /* z-index: 0; */
 }
@@ -48,7 +48,8 @@ body {
 }
 
 .logo:hover {
-  color: #7236CA;
+  /* color: #0021E5; */
+  font-size: 45px;
 }
 
 .main-text {
@@ -95,7 +96,7 @@ body {
   border-radius: 20px;
   left: 0;
   position: relative;
-  top: -35px;
+  top: 10px;
   width: 1600px;
   font-size: 14px;
   font-family: "Noto Sans KR", Helvetica;
