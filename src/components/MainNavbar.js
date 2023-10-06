@@ -1,12 +1,16 @@
 import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
 import { BsFillHouseDoorFill, BsFillPersonFill, BsFillGearFill, BsClipboardFill } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
 
 function CustomNavbar({ logoText, menuItems, bgColor }) {
   return (
     <Navbar bg="transparent" expand="lg" className="main-navbar">
 
-      <Navbar.Brand href="#" className="logo" >IT Asset</Navbar.Brand>
+      <Navbar.Brand>
+        <Link to="/" className="logo">IT Asset</Link>
+
+      </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
         <Nav className="ml-auto">

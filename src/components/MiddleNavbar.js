@@ -1,20 +1,21 @@
 import React from 'react';
 import { Nav } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 function CustomNavbar({ logoText, menuItems, bgColor }) {
   return (
     <div className="middle-navbar">
       <Nav variant="pills" defaultActiveKey="/home">
         <Nav.Item className="middle-menu-icon">
-          <Nav.Link>
+          <Link to="/">
             <img src={process.env.PUBLIC_URL + "/image/icons/menu_icon_50px.png"} alt="menu_icon" />
-          </Nav.Link>
+          </Link>
         </Nav.Item>
         <Nav.Item className="middle-box">
-          <Nav.Link to="/">All</Nav.Link>
+          <Link to="/all">All</Link>
         </Nav.Item>
         <Nav.Item className="middle-box">
-          <Nav.Link eventKey="link-1">RM</Nav.Link>
+          <Link to="/rm">RM</Link>
         </Nav.Item>
         <Nav.Item className="middle-box">
           <Nav.Link eventKey="link-2" >Access</Nav.Link>

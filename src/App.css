@@ -42,6 +42,7 @@ body {
 
 .logo {
   color: white;
+  text-decoration: none;
   font-family: "Noto Sans KR", Helvetica;
   font-size: 40px;
   font-weight: 900;
@@ -50,6 +51,7 @@ body {
 .logo:hover {
   /* color: #0021E5; */
   font-size: 45px;
+  color: #3f3f3f
 }
 
 .main-text {

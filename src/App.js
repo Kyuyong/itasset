@@ -4,7 +4,10 @@ import { BsSearch } from 'react-icons/bs';
 import MainNavbar from './components/MainNavbar';
 import MiddleNavbar from './components/MiddleNavbar';
 import { Routes, Route, Link, useNavigate, Outlet } from 'react-router-dom';
-import About from './page/about'
+import Footer from './page/Footer'
+import Rm from './page/RM'
+import All from './page/All'
+import Home from './page/Home'
 
 function App() {
   return (
@@ -51,70 +54,15 @@ function App() {
       <div className='gap-60' />
 
       <Routes>
-        <Route path="/" element={
-          <>
-            <Container className="main-container">
-              <div className="title-text" >New Solution</div>
-              <Row>
-                <Col md={4}>
-                  <div className="newsolution-box">
-                    <div className="circle-img">
-                      <img src={process.env.PUBLIC_URL + "/image/main/circle_01.png"} alt="circle_01" />
-                    </div>
-                    <p className="box-text">새로운 AI/DT Solution을 <br></br> 만나보세요.</p>
-                    <p className="box-textsub">The Best AI/DT Solution and System have arrived.</p>
-                    <button type="button" class="btn btn-light newsolution-btn">See all products</button>
-                  </div>
-                </Col>
-                <Col md={8}>
-                  <Row>
-                    <Col md={6} className="solution-img">
-                      <div>
-                        <img src={process.env.PUBLIC_URL + "/image/solution/solution01.png"} alt="newsolution-box" />
-                        <p className="solution-title">DPRS</p>
-                        <p className="solution-title-fullname">Disaster Prevention & Recovery System</p>
-                        <p className="solution-titlekr">재난 예방복구 시스템</p>
-                      </div>
-                    </Col>
-                    <Col md={6} className="solution-img">
-                      <div>
-                        <img src={process.env.PUBLIC_URL + "/image/solution/solution02.png"} alt="newsolution-box" />
-                        <p className="solution-title">DPRS</p>
-                        <p className="solution-title-fullname">Disaster Prevention & Recovery System</p>
-                        <p className="solution-titlekr">재난 예방복구 시스템</p>
-                      </div>
-                    </Col>
-                  </Row>
-                  <Row>
-                    <Col md={6} className="solution-img">
-                      <div>
-                        <img src={process.env.PUBLIC_URL + "/image/solution/solution03.png"} alt="newsolution-box" />
-                        <p className="solution-title">DPRS</p>
-                        <p className="solution-title-fullname">Disaster Prevention & Recovery System</p>
-                        <p className="solution-titlekr">재난 예방복구 시스템</p>
-                      </div>
-                    </Col>
-                    <Col md={6} className="solution-img">
-                      <div>
-                        <img src={process.env.PUBLIC_URL + "/image/solution/solution04.png"} alt="newsolution-box" />
-                        <p className="solution-title">DPRS</p>
-                        <p className="solution-title-fullname">Disaster Prevention & Recovery System</p>
-                        <p className="solution-titlekr">재난 예방복구 시스템</p>
-                      </div>
-                    </Col>
-                  </Row>
-                </Col>
-              </Row>
-            </Container>
-          </>
-        } />
-        <Route path="/about" element={<About />} />
-      </Routes>
 
+        <Route path="/" element={<Home />} />
+        <Route path="/all" element={<All />} />
+        <Route path="/rm" element={<Rm />} />
+
+      </Routes>
+      <Footer />
     </>
   );
 }
-
-
 
 export default App;
