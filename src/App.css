@@ -1,5 +1,6 @@
 body {
   background-color: #f9f9f9;
+  font-family: "Noto Sans KR", Helvetica;
 }
 
 .main-container {
@@ -72,6 +73,7 @@ body {
 
 .main-img {
   height: 520px;
+  width: 65%;
   margin-left: 300px;
   position: relative;
 }
@@ -120,6 +122,32 @@ body {
 
 }
 
+.middle-box .link-title {
+  text-decoration: none;
+  color: white;
+
+
+}
+
+.middle-box:hover {
+  background-color: white;
+  border-radius: 20px;
+  color: white;
+
+}
+
+.link-title:hover {
+  background-color: white;
+  border-radius: 20px;
+  color: #585858;
+}
+
+.link-title:active {
+  color: #585858;
+  background-color: white;
+  border-radius: 20px;
+}
+
 .middle-menu-icon {
   width: 120px;
   margin-left: 10px;
@@ -128,6 +156,8 @@ body {
   text-align: center;
 }
 
+
+/* 
 .middle-navbar .nav-link.active {
   color: #585858;
   background-color: white;
@@ -136,7 +166,7 @@ body {
 
 .middle-navbar .nav-link {
   color: white;
-}
+} */
 
 
 .title-text {

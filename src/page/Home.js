@@ -1,7 +1,7 @@
 import { Container, Row, Col, Image } from 'react-bootstrap';
 import { BsFillStarFill } from 'react-icons/bs';
 
-const RM = () => {
+const Home = () => {
   return (
     <div>
       <Container className="main-container">
@@ -172,4 +172,4 @@ const RM = () => {
   );
 };
 
-export default RM;
+export default Home;

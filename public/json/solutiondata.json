@@ -1,0 +1,32 @@
+[
+  {
+    "id": "0001",
+    "sol_name": "DPRS",
+    "sol_full_name": "Disaster Prevention & Reccovery System",
+    "kor_name": "재난재해 종합 관제 시스템",
+    "developer": "남정수",
+    "Headquarters": "Access",
+    "team": "AI/DT추진팀",
+    "url": "https://naver.com"
+  },
+  {
+    "id": "0002",
+    "sol_name": "Schedule Map",
+    "sol_full_name": "",
+    "kor_name": "다수국소 경로추천 시스템",
+    "developer": "김용욱",
+    "Headquarters": "Access",
+    "team": "AI/DT추진팀",
+    "url": "https://naver.com"
+  },
+  {
+    "id": "0003",
+    "sol_name": "OCAS",
+    "sol_full_name": "Ons Construction Site Alert System",
+    "kor_name": "SK오앤에스 미인지 공사장 경보 시스템",
+    "developer": "남정수",
+    "Headquarters": "Access",
+    "team": "AI/DT추진팀",
+    "url": "https://naver.com"
+  }
+]

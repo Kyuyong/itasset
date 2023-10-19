@@ -2,7 +2,7 @@ import React from 'react';
 import { Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-function CustomNavbar({ logoText, menuItems, bgColor }) {
+function CustomNavbar() {
   return (
     <div className="middle-navbar">
       <Nav variant="pills" defaultActiveKey="/home">
@@ -12,28 +12,28 @@ function CustomNavbar({ logoText, menuItems, bgColor }) {
           </Link>
         </Nav.Item>
         <Nav.Item className="middle-box">
-          <Link to="/all">All</Link>
+          <Link to="/all" className="link-title">All Solution</Link>
         </Nav.Item>
         <Nav.Item className="middle-box">
-          <Link to="/rm">RM</Link>
+          <Link to="/main/rm" className="link-title">RM</Link>
         </Nav.Item>
         <Nav.Item className="middle-box">
-          <Nav.Link eventKey="link-2" >Access</Nav.Link>
+          <Link to="/rm" className="link-title">Access</Link>
         </Nav.Item>
         <Nav.Item className="middle-box">
-          <Nav.Link eventKey="link-3" >전송</Nav.Link>
+          <Link to="/rm" className="link-title">전송</Link>
         </Nav.Item>
         <Nav.Item className="middle-box">
-          <Nav.Link eventKey="link-4" >Infra설비</Nav.Link>
+          <Link to="/rm" className="link-title">Infra설비</Link>
         </Nav.Item>
         <Nav.Item className="middle-box">
-          <Nav.Link eventKey="link-5" >자산</Nav.Link>
+          <Link to="/rm" className="link-title">자산</Link>
         </Nav.Item>
         <Nav.Item className="middle-box">
-          <Nav.Link eventKey="link-6" >SO</Nav.Link>
+          <Link to="/rm" className="link-title">SO</Link>
         </Nav.Item>
         <Nav.Item className="middle-box">
-          <Nav.Link eventKey="link-7" >경영</Nav.Link>
+          <Link to="/rm" className="link-title">경영</Link>
         </Nav.Item>
       </Nav>
     </div>

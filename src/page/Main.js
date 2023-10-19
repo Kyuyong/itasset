@@ -1,27 +1,21 @@
-import { Link } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
+import { Outlet } from 'react-router-dom';
 import MainContents from '../components/MainContents';
 import MiddleNavbar from '../components/MiddleNavbar';
+import Recommend from '../components/Recommend';
 
-
-const All = () => {
+const Main = () => {
   return (
     <div>
       <Container className="main-container">
-
         <MainContents />
         <MiddleNavbar />
-
         <div className="gap-60" />
-        <h1>All Page</h1>
-        <p>리액트 라우터를 사용해 보는 프로젝트입니다.</p>
-        <Link to="/">Home</Link>
-
-        <div className="gap-60" />
+        <Recommend />
       </Container>
-
+      <Outlet />
     </div>
   );
 };
 
-export default All;
+export default Main;
