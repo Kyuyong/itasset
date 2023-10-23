@@ -2,7 +2,8 @@ import { Container, Row, Col } from 'react-bootstrap';
 import MainContents from '../components/MainContents';
 import MiddleNavbar from '../components/MiddleNavbar';
 
-const All = (props) => {
+const Access = (props) => {
+  const accessdb = props.sol_data.filter(item => item.work_field === "Access");
 
   return (
     <div>
@@ -10,11 +11,11 @@ const All = (props) => {
         <MainContents />
         <MiddleNavbar />
         <div className="gap-60" />
-        <div className="title-text">전체 AI/DT Solution</div>
+        <div className="title-text">Access AI/DT Solution</div>
         <div className="gap-20" />
         <div>
           <Row>
-            {props.sol_data.map((item) => (
+            {accessdb.map((item) => (
               <Col md={4} className="solution-img" key={item.id}>
                 <div>
                   <img src={process.env.PUBLIC_URL + "/image/solution/solution" + item.id + ".png"} alt="newsolution-box" />
@@ -34,4 +35,5 @@ const All = (props) => {
   );
 };
 
-export default All;
+
+export default Access;

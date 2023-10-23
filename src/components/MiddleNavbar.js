@@ -15,25 +15,25 @@ function CustomNavbar() {
           <Link to="/all" className="link-title">All Solution</Link>
         </Nav.Item>
         <Nav.Item className="middle-box">
-          <Link to="/main/rm" className="link-title">RM</Link>
+          <Link to="/rm" className="link-title">RM</Link>
         </Nav.Item>
         <Nav.Item className="middle-box">
-          <Link to="/rm" className="link-title">Access</Link>
+          <Link to="/access" className="link-title">Access</Link>
         </Nav.Item>
         <Nav.Item className="middle-box">
-          <Link to="/rm" className="link-title">전송</Link>
+          <Link to="/wire" className="link-title">전송</Link>
         </Nav.Item>
         <Nav.Item className="middle-box">
-          <Link to="/rm" className="link-title">Infra설비</Link>
+          <Link to="/infra" className="link-title">Infra설비</Link>
         </Nav.Item>
         <Nav.Item className="middle-box">
-          <Link to="/rm" className="link-title">자산</Link>
+          <Link to="/assetmgmt" className="link-title">자산</Link>
         </Nav.Item>
         <Nav.Item className="middle-box">
-          <Link to="/rm" className="link-title">SO</Link>
+          <Link to="/somgmt" className="link-title">SO</Link>
         </Nav.Item>
         <Nav.Item className="middle-box">
-          <Link to="/rm" className="link-title">경영</Link>
+          <Link to="/mgmt" className="link-title">경영</Link>
         </Nav.Item>
       </Nav>
     </div>

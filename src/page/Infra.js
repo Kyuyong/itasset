@@ -3,7 +3,7 @@ import { Container } from 'react-bootstrap';
 import MainContents from '../components/MainContents';
 import MiddleNavbar from '../components/MiddleNavbar';
 
-const RM = () => {
+const Infra = () => {
   return (
     <div>
       <Container className="main-container">
@@ -19,4 +19,4 @@ const RM = () => {
   );
 };
 
-export default RM;
+export default Infra;
