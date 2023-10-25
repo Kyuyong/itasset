@@ -1,19 +1,35 @@
-import { Link } from 'react-router-dom';
-import { Container } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import MainContents from '../components/MainContents';
 import MiddleNavbar from '../components/MiddleNavbar';
 
-const AssetMgmt = () => {
+const AssetMgmt = (props) => {
+  const jsondb = props.sol_data.filter(item => item.work_field === "자산");
+
   return (
     <div>
       <Container className="main-container">
         <MainContents />
         <MiddleNavbar />
         <div className="gap-60" />
-        <h1>자산관리 Page</h1>
-        <p>리액트 라우터를 사용해 보는 프로젝트입니다.</p>
-        <Link to="/">Home</Link>
+        <div className="title-text">자산 AI/DT Solution</div>
+        <div className="gap-20" />
+        <div>
+          <Row>
+            {jsondb.map((item) => (
+              <Col md={4} className="solution-img" key={item.id}>
+                <div>
+                  <img src={process.env.PUBLIC_URL + "/image/solution/solution" + item.id + ".png"} alt="newsolution-box" />
+                  <p className="solution-title">{item.sol_name}</p>
+                  <p className="solution-title-fullname">{item.sol_full_name}</p>
+                  <p className="solution-titlekr">{item.kor_name}</p>
+                </div>
+              </Col>
+            ))}
+          </Row>
+        </div>
         <div className="gap-60" />
+
+
       </Container>
     </div>
   );

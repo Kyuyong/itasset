@@ -3,7 +3,7 @@ import MainContents from '../components/MainContents';
 import MiddleNavbar from '../components/MiddleNavbar';
 
 const Access = (props) => {
-  const accessdb = props.sol_data.filter(item => item.work_field === "Access");
+  const jsondb = props.sol_data.filter(item => item.work_field === "Access");
 
   return (
     <div>
@@ -15,7 +15,7 @@ const Access = (props) => {
         <div className="gap-20" />
         <div>
           <Row>
-            {accessdb.map((item) => (
+            {jsondb.map((item) => (
               <Col md={4} className="solution-img" key={item.id}>
                 <div>
                   <img src={process.env.PUBLIC_URL + "/image/solution/solution" + item.id + ".png"} alt="newsolution-box" />

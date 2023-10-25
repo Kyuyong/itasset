@@ -29,9 +29,16 @@ function Recommend() {
                 <p className="solution-titlekr">재난 예방복구 시스템</p>
               </div>
             </Col>
+
             <Col md={6} className="solution-img">
               <div>
-                <img src={process.env.PUBLIC_URL + "/image/solution/solution02.png"} alt="newsolution-box" />
+                <div className="solution-img-wrapper">
+                  <img src={process.env.PUBLIC_URL + "/image/solution/solution02.png"} alt="newsolution-box" />
+                  <div className="solution-img-link">
+                    <p>test</p>
+                  </div>
+                </div>
+
                 <p className="solution-title">DPRS</p>
                 <p className="solution-title-fullname">Disaster Prevention & Recovery System</p>
                 <p className="solution-titlekr">재난 예방복구 시스템</p>
@@ -49,7 +56,7 @@ function Recommend() {
             </Col>
             <Col md={6} className="solution-img">
               <div>
-                <img src={process.env.PUBLIC_URL + "/image/solution/solution04.png"} alt="newsolution-box" />
+                <img className="solution-link" src={process.env.PUBLIC_URL + "/image/solution/solution04.png"} alt="newsolution-box" />
                 <p className="solution-title">DPRS</p>
                 <p className="solution-title-fullname">Disaster Prevention & Recovery System</p>
                 <p className="solution-titlekr">재난 예방복구 시스템</p>
