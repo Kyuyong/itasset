@@ -18,7 +18,7 @@ function CustomNavbar({ logoText, menuItems, bgColor }) {
             <BsFillHouseDoorFill size={24} />
             <span>Home</span>
           </Nav.Link>
-          <Nav.Link href="#" className="d-flex flex-column align-items-center main-nav">
+          <Nav.Link href="/product" className="d-flex flex-column align-items-center main-nav">
             <BsFillPersonFill size={24} />
             <span>Work</span>
           </Nav.Link>

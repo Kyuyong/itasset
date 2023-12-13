@@ -14,11 +14,12 @@ import Mgmt from './page/Mgmt';
 import RM from './page/RM';
 import SOMgmt from './page/SOMgmt';
 import Wire from './page/Wire';
+import Product from './page/Product';
 
 // Solution data 불러오기
 import sol_data from './json/solutiondata.json';
-
-
+// import data from './data.js';
+// import Detail from './Detail.js';
 
 function App() {
   return (
@@ -35,23 +36,18 @@ function App() {
           <Route path="/assetmgmt" element={<AssetMgmt sol_data={sol_data} />}></Route>
           <Route path="/somgmt" element={<SOMgmt sol_data={sol_data} />}></Route>
           <Route path="/mgmt" element={<Mgmt sol_data={sol_data} />}></Route>
-          <Route path="/product" element={<div><h1>product</h1></div>} />
+          {/* <Route path="/product/:id" element={<Product sol_data={sol_data} />}></Route> */}
+
+          <Route path="/product/:id" element={<Product sol_data={sol_data} />} />
+
+          {/* <Route>
+            <Route path="/detail/:id" element={<Detail data={data} />} />
+          </Route> */}
         </Routes>
 
-        {/* <div>
-          {sol_data.map((item) => (
-            <div className="card" key={item.id}>
-              <h2>{item.sol_name}</h2>
-              <p>{item.kor_name}</p>
-              <p>Developer: {item.developer}</p>
-              <p>Headquarters: {item.headquarters}</p>
-              <p>Team: {item.team}</p>
-              <a href={item.url} target="_blank" rel="noopener noreferrer">
-                Learn More
-              </a>
-            </div>
-          ))}
-        </div> */}
+
+
+
         <Outlet />
       </Container>
       <Footer />
