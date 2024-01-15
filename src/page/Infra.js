@@ -1,6 +1,7 @@
 import { Container, Row, Col } from 'react-bootstrap';
 import MainContents from '../components/MainContents';
 import MiddleNavbar from '../components/MiddleNavbar';
+import SolutionBox from '../components/SolutionBox';
 
 const Infra = (props) => {
   const jsondb = props.sol_data.filter(item => item.work_field === "Infra설비");
@@ -16,13 +17,16 @@ const Infra = (props) => {
         <div>
           <Row>
             {jsondb.map((item) => (
-              <Col md={4} className="solution-img" key={item.id}>
-                <div>
-                  <img src={process.env.PUBLIC_URL + "/image/solution/solution" + item.id + ".png"} alt="newsolution-box" />
-                  <p className="solution-title">{item.sol_name}</p>
-                  <p className="solution-title-fullname">{item.sol_full_name}</p>
-                  <p className="solution-titlekr">{item.kor_name}</p>
-                </div>
+              <Col md={4} key={item.id}>
+                <Col md={4} key={item.id}>
+                  <SolutionBox
+                    key={item.id}
+                    id={item.id}
+                    solName={item.sol_name}
+                    solFullName={item.sol_full_name}
+                    korName={item.kor_name}
+                  />
+                </Col>
               </Col>
             ))}
           </Row>

@@ -3,6 +3,7 @@
 import React from 'react';
 import { Row, Col, Image } from 'react-bootstrap';
 import { BsFillStarFill } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
 
 function Recommend() {
   return (
@@ -72,7 +73,9 @@ function Recommend() {
         <hr className="banner-line" />
         <p className="box-textsub"> No. 1 기술전문회사로 도약하기 위해서 우리의 본업인 현장 경쟁력 강화를 위해 AI/DT전문가 양성하였습니다. <br></br>
           우리 회사 IT 전문가들의 잠재능력을 유감없이 보여주는 여러가지 사례와 과제들을 확인해보세요.</p>
-        <button type="button" class="btn btn-danger banner-btn">See More</button>
+        <button type="button" class="btn btn-danger banner-btn">
+          <Link to="/introduction" className="banner-link">See More</Link>
+        </button>
       </div>
       <div className="gap-30" />
 

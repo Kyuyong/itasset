@@ -15,6 +15,7 @@ import RM from './page/RM';
 import SOMgmt from './page/SOMgmt';
 import Wire from './page/Wire';
 import Product from './page/Product';
+import Introduction from './page/Introduction';
 
 // Solution data 불러오기
 import sol_data from './json/solutiondata.json';
@@ -36,18 +37,9 @@ function App() {
           <Route path="/assetmgmt" element={<AssetMgmt sol_data={sol_data} />}></Route>
           <Route path="/somgmt" element={<SOMgmt sol_data={sol_data} />}></Route>
           <Route path="/mgmt" element={<Mgmt sol_data={sol_data} />}></Route>
-          {/* <Route path="/product/:id" element={<Product sol_data={sol_data} />}></Route> */}
-
           <Route path="/product/:id" element={<Product sol_data={sol_data} />} />
-
-          {/* <Route>
-            <Route path="/detail/:id" element={<Detail data={data} />} />
-          </Route> */}
+          <Route path="/introduction" element={<Introduction sol_data={sol_data} />}></Route>
         </Routes>
-
-
-
-
         <Outlet />
       </Container>
       <Footer />

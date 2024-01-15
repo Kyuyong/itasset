@@ -21,7 +21,7 @@ function MainContents() {
               <Form className="d-flex search-form">
                 <Form.Control
                   type="search"
-                  placeholder="원하는 검색어를 입력해주세요."
+                  placeholder="Solution 검색 기능을 제공 예정입니다. (검색기능 미작동 중)"
                   className="me-2"
                   aria-label="Search"
                 />
