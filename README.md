@@ -1,6 +1,5 @@
-# Getting Started with Create React App
+# SK오앤에스 IT Asset 시스템 개발 Code
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
