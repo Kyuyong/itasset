@@ -3,6 +3,10 @@ body {
   font-family: "Noto Sans KR", Helvetica;
 }
 
+a {
+  text-decoration: none;
+}
+
 .main-container {
   max-width: 1600px;
   margin: 0 auto;
@@ -92,15 +96,16 @@ body {
   position: relative;
 }
 
-.main-img img {
-  animation: moveUpDown 2s infinite;
-}
 
 .vertical-center {
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 100%;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .search-form {
@@ -197,9 +202,19 @@ body {
   font-weight: 350;
   line-height: normal;
   padding: 5px;
-  margin: 10px;
+  margin-left: 10px;
 }
 
+.title-text-sub {
+  color: #3a3a3a;
+  font-family: Noto Sans KR;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 0px;
+  margin-left: 15px;
+}
 
 /* ======== newsolution 항목 ======== */
 
@@ -221,6 +236,7 @@ body {
   /* 텍스트 가운데 정렬 */
   border-radius: 20px;
 }
+
 
 .box-text {
   font-size: 24px;
@@ -270,35 +286,63 @@ body {
   position: relative;
 }
 
-/* .solution-img-wrapper {
-  position: relative;
-  overflow: hidden;
-} */
 
-.solution-img-link {
+
+/* /////// 오버레이 start ///////// */
+/* /////// 오버레이 start ///////// */
+/* /////// 오버레이 start ///////// */
+
+
+/* overlay 아이콘에 대한 스타일 */
+.overlay-icons {
   position: absolute;
-  top: 10%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 15px 25px;
-  margin-top: 0;
-  color: #fff;
-  background: rgba(0, 0, 0, 0.5);
-  transition: 350ms;
+  background-color: rgba(35, 35, 35, 0.9);
+  border-radius: 20px;
+  width: 31.2em;
+  height: 78%;
+  top: 100%;
+  display: none;
+
+}
+
+.solution-img:hover .overlay-icons {
+  display: block;
+  top: 0%;
+
+}
+
+/* 각 아이콘의 스타일 */
+.overlay-icons img {
+  width: 50px;
+  /* 적절한 크기로 조절 */
+  margin: 0 5px;
+}
+
+.solution-img:hover {
+  display: block;
+}
+
+/* 각 아이콘의 스타일 */
+.overlay-icons img {
+  width: 50px;
+  /* 적절한 크기로 조절 */
   margin: 10px;
 }
 
-/*
-.solution-img-wrapper:hover {
-  opacity: 0.8;
-} */
+/* 아이콘 텍스트 스타일 */
+.overlay-icons a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
 
+/* /////// 오버레이 end ///////// */
+/* /////// 오버레이 end ///////// */
+/* /////// 오버레이 end ///////// */
 
 .solution-title {
   font-family: "Noto Sans KR", Helvetica;
   font-weight: 700;
-  font-size: 30px;
+  font-size: 20px;
   padding: 0px;
   margin: 0px;
   margin-left: 10px;
@@ -308,7 +352,7 @@ body {
 .solution-title-fullname {
   font-family: "Noto Sans KR", Helvetica;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 12px;
   padding: 0px;
   margin: 0px;
   margin-left: 10px;
@@ -405,13 +449,13 @@ body {
 /* ======== joinus 정의 ======== */
 
 .joinus-title {
-  font-size: 50px;
+  font-size: 30px;
   font-family: "Noto Sans KR", Helvetica;
-  font-weight: 900;
-  color: #7135C9;
+  font-weight: 300;
+  color: #5395d1;
   height: 75px;
   margin: 0;
-  margin-bottom: 20px;
+
 
 }
 
@@ -431,9 +475,14 @@ body {
   width: 350px;
   padding: 10px;
   /* position: relative; */
+  transition: transform 0.3s ease-out;
 }
 
-
+.joinus-box:hover {
+  /* 마우스 오버 시의 변화를 정의하는 부분 */
+  transform: translateY(-20px);
+  /* 위로 10px 이동하도록 설정 */
+}
 
 
 .person-circle {
@@ -448,7 +497,7 @@ body {
   font-size: 20px;
   font-family: "Noto Sans KR", Helvetica;
   font-weight: 800;
-  color: #7236ca;
+  color: #5395d1;
   margin: 0px;
 }
 
@@ -512,6 +561,10 @@ body {
 .product-btn {
   width: 200px;
   margin: 10px;
+}
+
+.product-btn a {
+  color: #333333;
 }
 
 
@@ -594,16 +647,17 @@ body {
 }
 
 .introduction-card {
-  background: rgb(255, 255, 255);
-  border-radius: 30px;
+  background: rgba(216, 216, 216, 0.90);
+  border-radius: 10px;
   box-shadow: 3px 4px 4px 0px rgba(0, 0, 0, 0.25);
   margin-top: 20px;
+  padding: 30px;
 
 }
 
 
 .introduction-description {
-  background-color: #fff;
+  background-color: rgba(216, 216, 216, 0.90);
   margin: 20px;
 
 }
@@ -613,7 +667,7 @@ body {
   background-color: #5395d1;
   padding: 10px;
   text-align: center;
-  border-radius: 20px;
+  border-radius: 5px;
 }
 
 .introduction-description-contents {
@@ -697,8 +751,43 @@ body {
 
 
 /* =============================================================== */
+/* ScrollButton.css */
+
+.scroll-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 18px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s, opacity 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scroll-button:hover {
+  background-color: #2980b9;
+}
 
 
+
+
+
+
+/* =============================================================== */
+
+
+
+/* ================Animaiton=================== */
+.animation-updown {
+  animation: moveUpDown 2s infinite;
+}
 
 
 /* ======== gap 정의 ======== */

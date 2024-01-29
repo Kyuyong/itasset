@@ -1,9 +1,46 @@
-// import { useParams } from 'react-router-dom';
 import { Container, Row, Col } from 'react-bootstrap';
 import IntroductionCard from '../components/IntroductionCard';
+// import React, { useEffect } from 'react';
+// import { useNavigate } from 'react-router-dom';
+// import { useHistory } from 'react-router-dom';
 
 const Introduction = (props) => {
   const sol_data = props.sol_data;
+
+  // const navigate = useNavigate();
+  // const history = useHistory();
+
+  // useEffect(() => {
+  //   // 페이지가 마운트될 때 스크롤을 페이지 상단으로 이동
+  //   window.scrollTo(0, 0);
+
+  //   // 페이지 전환 이벤트 감지
+  //   const unlisten = history.listen((location) => {
+  //     window.scrollTo(0, 0);
+  //   });
+
+  //   // 컴포넌트가 언마운트될 때 이벤트 리스너 해제
+  //   return () => {
+  //     unlisten();
+  //   };
+  // }, [history]);
+
+  // useEffect(() => {
+  //   // 페이지가 마운트될 때 스크롤을 페이지 상단으로 이동
+  //   window.scrollTo(0, 0);
+
+  //   // 페이지 전환 이벤트 감지
+  //   const unlisten = navigate((location) => {
+  //     window.scrollTo(0, 0);
+  //   });
+
+  //   // 컴포넌트가 언마운트될 때 이벤트 리스너 해제
+  //   return () => {
+  //     unlisten();
+  //   };
+  // }, [navigate]);
+
+
 
   return (
     <div>
@@ -33,25 +70,25 @@ const Introduction = (props) => {
         </div>
 
         <div className="introduction-contentsbox">
-          <h4>AI/DT Working Group Solution</h4>
+          <div className="gap-60" />
+          <h3>AI/DT Working Group Solution</h3>
           <p>'23년 30명의 AI/DT 전문가가 만든 과제를 소개합니다.</p>
           {sol_data.map((item) => (
             <IntroductionCard
               key={item.id}
               id={item.id}
+              n_id={item.n_id}
               solName={item.sol_name}
+              headquarters={item.headquarters}
               solFullName={item.sol_full_name}
               korName={item.kor_name}
               developer={item.developer}
+              url={item.url}
             />
           ))}
 
         </div>
 
-        <div className="gap-60" />
-        <div className="gap-60" />
-        <div className="gap-60" />
-        <div className="gap-60" />
         <div className="gap-60" />
         <div className="gap-60" />
 

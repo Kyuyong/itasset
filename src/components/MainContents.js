@@ -33,7 +33,7 @@ function MainContents() {
           </Col>
           <Col md={6} className="text-right">
             <div className="main-img vertical-center">
-              <img src={process.env.PUBLIC_URL + "/image/main/MainTitile.png"} alt="title" />
+              <img className="animation-updown" src={process.env.PUBLIC_URL + "/image/main/MainTitile.png"} alt="title" />
             </div>
           </Col>
         </Row>

@@ -3,6 +3,7 @@ import { Container } from 'react-bootstrap';
 import MainNavbar from './components/MainNavbar';
 import { Routes, Route, Outlet } from 'react-router-dom';
 import Footer from './page/Footer'
+import React from 'react';
 
 // Page import 대상 리스트
 import All from './page/All';
@@ -16,11 +17,11 @@ import SOMgmt from './page/SOMgmt';
 import Wire from './page/Wire';
 import Product from './page/Product';
 import Introduction from './page/Introduction';
+import ScrollToTop from './components/ScrollToTop';
 
 // Solution data 불러오기
 import sol_data from './json/solutiondata.json';
-// import data from './data.js';
-// import Detail from './Detail.js';
+import developer_data from './json/developerdata.json';
 
 function App() {
   return (
@@ -28,7 +29,7 @@ function App() {
       <Container className="main-container">
         <MainNavbar />
         <Routes>
-          <Route path="/" element={<Main />}></Route>
+          <Route path="/" element={<Main sol_data={sol_data} developer_data={developer_data} />}></Route>
           <Route path="/all" element={<All sol_data={sol_data} />}></Route>
           <Route path="/rm" element={<RM sol_data={sol_data} />}></Route>
           <Route path="/access" element={<Access sol_data={sol_data} />}></Route>
@@ -41,6 +42,7 @@ function App() {
           <Route path="/introduction" element={<Introduction sol_data={sol_data} />}></Route>
         </Routes>
         <Outlet />
+        <ScrollToTop />
       </Container>
       <Footer />
     </>
@@ -48,5 +50,3 @@ function App() {
 }
 
 export default App;
-
-

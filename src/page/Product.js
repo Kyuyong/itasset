@@ -35,8 +35,26 @@ const Product = (props) => {
                     <div className="gap-20" />
                     <div style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}>
                       <span>
-                        <Button variant="light product-btn">Go to System</Button>
-                        <Button variant="outline-light product-btn">DOCS</Button>
+                        <Button variant="light product-btn">
+                          <span>
+                            <img style={{ height: '30px', width: '30px' }}
+                              src={process.env.PUBLIC_URL + "/image/icons/monitor-icon.png"}
+                              alt="github-mark" />
+                          </span>
+                          <span>
+                            <a href={findItem.url}  > Go to System</a>
+                          </span>
+                        </Button>
+                        <Button variant="outline-light product-btn">
+                          <span>
+                            <img style={{ height: '26px', width: '26px' }}
+                              src={process.env.PUBLIC_URL + "/image/icons/github-mark.png"}
+                              alt="github-mark" />
+                          </span>
+                          <span>
+                            <a href={findItem.github_url}  > GitHub Code</a>
+                          </span>
+                        </Button>
                       </span>
                     </div>
                   </div>
@@ -120,11 +138,11 @@ const Product = (props) => {
               <Col md={4}>
                 <div style={{ textAlign: 'center', margin: 30 }}>
                   <div>
-                    <Image src={process.env.PUBLIC_URL + "/image/main/person02.jpg"} className="product-person-circle" roundedCircle />
+                    <Image src={process.env.PUBLIC_URL + "/image/developer/" + findItem.n_id + ".jpg"} className="product-person-circle" roundedCircle />
                     <div>
-                      <span style={{ color: '#585858' }}>Infra AI/DT </span>
-                      <span style={{ color: '#1CA8DB' }}>DevOps TF </span>
-                      <span><h4>박정현</h4></span>
+                      <span style={{ color: '#585858' }}>{findItem.headquarters} </span>
+                      <span style={{ color: '#1CA8DB' }}>{findItem.team} </span>
+                      <span><h4>{findItem.developer} </h4></span>
                     </div>
                   </div>
                   <hr />

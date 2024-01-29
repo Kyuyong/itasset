@@ -14,19 +14,19 @@ function CustomNavbar({ logoText, menuItems, bgColor }) {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
         <Nav className="ml-auto">
-          <Nav.Link href="#" className="d-flex flex-column align-items-center main-nav">
+          <Nav.Link href="/" className="d-flex flex-column align-items-center main-nav">
             <BsFillHouseDoorFill size={24} />
             <span>Home</span>
           </Nav.Link>
-          <Nav.Link href="/product" className="d-flex flex-column align-items-center main-nav">
+          <Nav.Link href="/" className="d-flex flex-column align-items-center main-nav">
             <BsFillPersonFill size={24} />
             <span>Work</span>
           </Nav.Link>
-          <Nav.Link href="#" className="d-flex flex-column align-items-center main-nav">
+          <Nav.Link href="/" className="d-flex flex-column align-items-center main-nav">
             <BsFillGearFill size={24} />
             <span>Setting</span>
           </Nav.Link>
-          <Nav.Link href="#" className="d-flex flex-column align-items-center main-nav">
+          <Nav.Link href="/" className="d-flex flex-column align-items-center main-nav">
             <BsClipboardFill size={24} />
             <span>Login</span>
           </Nav.Link>
