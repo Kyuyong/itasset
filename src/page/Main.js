@@ -30,7 +30,7 @@ const Main = ({ onLogout }) => {
 
 
 
-      <div style={{ height: '3000px', backgroundColor: '#5a5a5a' }}></div>
+      {/* <div style={{ height: '3000px', backgroundColor: '#5a5a5a' }}></div> */}
       <Outlet />
       <Footer />
     </div>
