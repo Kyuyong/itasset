@@ -1,8 +1,20 @@
-import React from 'react';
-import { Row, Col, Button, Form } from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Row, Col, Button } from 'react-bootstrap';
 import { BsSearch } from 'react-icons/bs';
 
-function MainContents() {
+const MainContents = ({ data, onSearch }) => {
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const filteredResults = data.filter(solution =>
+      solution.sol_name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      solution.kor_name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    onSearch(filteredResults);
+  };
+
+
   return (
     <div className="main-box">
       <div className="main-bg" />
@@ -18,20 +30,21 @@ function MainContents() {
                   현장에 필요한 Tool 개발하여 제공하고 있습니다.
                 </p>
               </div>
-              <Form className="d-flex search-form">
-                <Form.Control
-                  type="search"
-                  placeholder="Solution 검색 기능을 제공 예정입니다. (검색기능 미작동 중)"
-                  className="me-2"
-                  aria-label="Search"
-                />
-                <Button >
-                  <BsSearch size={24} />
-                </Button>
-              </Form>
+              <form onSubmit={handleSubmit} style={{ display: 'flex', alignItems: 'center' }}>
+                <div className="maininputWrap">
+                  <input
+                    type="text"
+                    placeholder="Solution 이름을 검색하세요."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    style={{ flexGrow: 1, padding: '10px', marginRight: '10px' }}
+                  />
+                </div>
+                <Button type="submit"> <BsSearch size={24} /> </Button>
+              </form>
             </div>
           </Col>
-          <Col md={6} className="text-right">
+          <Col md={6} >
             <div className="main-img vertical-center">
               <img className="animation-updown" src={process.env.PUBLIC_URL + "/image/main/MainTitile.png"} alt="title" />
             </div>

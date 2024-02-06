@@ -1,40 +1,33 @@
-import React from 'react';
-import { Navbar, Nav } from 'react-bootstrap';
-import { BsFillHouseDoorFill, BsFillPersonFill, BsFillGearFill, BsClipboardFill } from 'react-icons/bs';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { BsLockFill } from 'react-icons/bs';
 
-function CustomNavbar({ logoText, menuItems, bgColor }) {
+const MainNavBar = ({ onLogout }) => {
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 100; // 50px 이상 스크롤되면 true
+      setScrolled(isScrolled);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <Navbar bg="transparent" expand="lg" className="main-navbar">
-
-      <Navbar.Brand>
-        <Link to="/" className="logo">IT Asset</Link>
-
-      </Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
-        <Nav className="ml-auto">
-          <Nav.Link href="/" className="d-flex flex-column align-items-center main-nav">
-            <BsFillHouseDoorFill size={24} />
-            <span>Home</span>
-          </Nav.Link>
-          <Nav.Link href="/" className="d-flex flex-column align-items-center main-nav">
-            <BsFillPersonFill size={24} />
-            <span>Work</span>
-          </Nav.Link>
-          <Nav.Link href="/" className="d-flex flex-column align-items-center main-nav">
-            <BsFillGearFill size={24} />
-            <span>Setting</span>
-          </Nav.Link>
-          <Nav.Link href="/" className="d-flex flex-column align-items-center main-nav">
-            <BsClipboardFill size={24} />
-            <span>Login</span>
-          </Nav.Link>
-        </Nav>
-      </Navbar.Collapse>
-
-    </Navbar>
+    <nav className={`c-navbar ${scrolled ? 'scrolled' : ''}`}>
+      <div className="c-navbar-inner">
+        <div className="c-navbar-logo">
+          <a href="/">IT Asset</a>
+        </div>
+        <div className="c-navbar-logout" onClick={onLogout}>
+          <BsLockFill size={24} />
+          <i className="fas fa-sign-out-alt"></i>
+          Logout
+        </div>
+      </div>
+    </nav>
   );
-}
+};
 
-export default CustomNavbar;
+export default MainNavBar;
