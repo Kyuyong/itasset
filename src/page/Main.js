@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Routes, Route, Outlet, useNavigate } from 'react-router-dom';
 import MainNavBar from '../components/MainNavbar';
 import MainContents from '../components/MainContents';
-import MiddleNavbar from '../components/MainNavbar';
+import MiddleNavbar from '../components/MiddleNavbar';
 import SearchSolList from './SearchSolList';
 import Footer from '../page/Footer'
 
@@ -27,6 +27,7 @@ const Main = ({ onLogout }) => {
       <Routes>
         <Route path='/search' element={<SearchSolList data={searchResults} />}></Route>
       </Routes>
+
 
 
       <div style={{ height: '3000px', backgroundColor: '#5a5a5a' }}></div>

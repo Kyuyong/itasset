@@ -1,7 +1,7 @@
 import React from 'react';
 
 const SearchSolList = ({ data }) => {
-  const solutions = Array.isArray(data) ? data : [];
+  // const solutions = Array.isArray(data) ? data : [];
   return (
     <div>
       <h2>검색 결과</h2>
