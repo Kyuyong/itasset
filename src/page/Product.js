@@ -110,12 +110,21 @@ const Product = (props) => {
                   <p>
                     Each element is well presented in very complex documentation.
                     You can read more about the documentation here.
+                    If you want to get inspiration or just show something directly to your clients,
+                    you can jump-start your development with our pre-built example pages.
+                    You will be able to quickly set up the basic structure for your web project.
                   </p>
                 </div>
                 <div>
                   <div className="gap-40"></div>
                   <h4>활용 대상</h4>
                   <p>
+                    If you want to get inspiration or just show something directly to your clients,
+                    you can jump-start your development with our pre-built example pages.
+                    You will be able to quickly set up the basic structure for your web project.
+                    If you want to get inspiration or just show something directly to your clients,
+                    you can jump-start your development with our pre-built example pages.
+                    You will be able to quickly set up the basic structure for your web project.
                     If you want to get inspiration or just show something directly to your clients,
                     you can jump-start your development with our pre-built example pages.
                     You will be able to quickly set up the basic structure for your web project.
@@ -181,6 +190,8 @@ const Product = (props) => {
             </Row>
           </div>
         </div>
+        <div className="gap-60" />
+        <div className="gap-60" />
         <hr />
         <div>
           <div className="gap-60" />
@@ -199,9 +210,10 @@ const Product = (props) => {
             ))}
           </Row>
         </div>
-        <div className="gap-60" />
-        <div className="gap-60" />
+
+
       </Container>
+      <div className="gap-60" />
     </div>
   );
 };

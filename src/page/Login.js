@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import accountList from '../json/acountlist.json';
 
 
 const Login = ({ onLogin }) => {
@@ -7,19 +8,34 @@ const Login = ({ onLogin }) => {
   const [loginError, setLoginError] = useState(false);
 
   // 로그인 정보를 변수로 선언
-  const validUsername = 'admin';
-  const validPassword = '1234';
+  // const validUsername = 'admin';
+  // const validPassword = '1234';
 
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // 변수를 사용하여 로그인 검증
-    if (username === validUsername && password === validPassword) {
+  const handleLogin = (e) => {
+    e.preventDefault();
+    const accountExists =
+      accountList.some(account => account.id === username && account.password === password);
+
+    if (accountExists) {
       onLogin(true); // 로그인 성공
+      setLoginError(false);
     } else {
-      setLoginError(true); // 로그인 실패, 에러 메시지 표시
+      setLoginError(true);
     }
   };
+
+
+
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   // 변수를 사용하여 로그인 검증
+  //   if (username === validUsername && password === validPassword) {
+  //     onLogin(true); // 로그인 성공
+  //   } else {
+  //     setLoginError(true); // 로그인 실패, 에러 메시지 표시
+  //   }
+  // };
 
   return (
     <div className="main-container">
@@ -33,7 +49,7 @@ const Login = ({ onLogin }) => {
         <div className="login-rightside">
           <div className="gap-60" /><div className="gap-60" />
           <div className="titleWrap">Welcome to IT Asset!!</div>
-          <form onSubmit={handleSubmit} className="contentWrap">
+          <form onSubmit={handleLogin} className="contentWrap">
             <div className="inputTitle">사번</div>
             <div className="inputWrap">
               <input

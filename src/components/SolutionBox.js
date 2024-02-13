@@ -12,13 +12,13 @@ const SolutionBox = ({ id, solName, solFullName, korName, url }) => {
             <Col md={3}>
               <a href={url}>
                 <Image src={process.env.PUBLIC_URL + "/image/icons/live_preview.png"} alt="solution-link" />
-                <p style={{ color: "white" }}>Live Preview</p>
+                <p style={{ color: "white" }}>바로가기</p>
               </a>
             </Col>
             <Col md={3}>
               <a href={"/product/" + id}>
                 <Image src={process.env.PUBLIC_URL + "/image/icons/more_detail.png"} alt="solution-info" />
-                <p>More detail</p>
+                <p>자세한 설명</p>
               </a>
             </Col>
             <Col md={3}></Col>

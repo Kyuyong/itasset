@@ -7,6 +7,9 @@ const MainContents = ({ data, onSearch }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!searchTerm.trim()) {
+      return; // Exit the function if searchTerm is empty
+    }
     const filteredResults = data.filter(solution =>
       solution.sol_name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       solution.kor_name.toLowerCase().includes(searchTerm.toLowerCase())

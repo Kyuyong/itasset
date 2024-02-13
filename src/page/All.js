@@ -1,21 +1,23 @@
 import { Container, Row, Col } from 'react-bootstrap';
-import MainContents from '../components/MainContents';
-import MiddleNavbar from '../components/MiddleNavbar';
+// import MainContents from '../components/MainContents';
+// import MiddleNavbar from '../components/MiddleNavbar';
 import SolutionBox from '../components/SolutionBox';
 
-const All = (props) => {
+const All = (sol_data) => {
+
+
 
   return (
     <div>
       <Container className="main-container">
-        <MainContents />
-        <MiddleNavbar />
-        <div className="gap-60" />
+        {/* <MainContents />
+        <MiddleNavbar /> */}
+        <div className="gap-20" />
         <div className="title-text">전체 AI/DT Solution</div>
         <div className="gap-20" />
         <div>
           <Row>
-            {props.sol_data.map((item) => (
+            {sol_data.sol_data.map((item) => (
               <Col md={4} key={item.id}>
                 <SolutionBox
                   key={item.id}

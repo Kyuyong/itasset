@@ -20,10 +20,9 @@ function Recommend(props) {
     return shuffled.slice(0, size).map(item => item.id);
   }
 
-
-
   return (
     <div>
+      <div className="gap-20" />
       <div>
         <div className="title-text" >New Solution</div>
         <div className="title-text-sub" >새로운 AI/DT Solution를 공유합니다.</div>
@@ -80,6 +79,8 @@ function Recommend(props) {
       </Row>
 
       <div className="gap-30" />
+      <hr />
+      <div className="gap-20" />
       <div className="main-banner">
         <p className="box-text">Creative AI/DT Solution Courses</p>
         <p className="box-textsub">‘23년 새로운 AI/DT Solution 및 과제를 소개합니다.</p>
@@ -161,7 +162,7 @@ function Recommend(props) {
           <BsFillStarFill style={{ color: '#EFC42D', margin: '2px' }}></BsFillStarFill>
           <BsFillStarFill style={{ color: '#EFC42D', margin: '2px' }}></BsFillStarFill>
           <p className="joinus-title">AI/DT 개발자를 소개합니다.</p>
-          <p>SK오앤에스는 250명(수정필요)의 AI/DT전문가와 함께 성장하고 있습니다.
+          <p>SK오앤에스는 40명의 AI/DT전문가와 함께 성장하고 있습니다.
             현장 업무에 필요한 여러가지 아이디어 발굴을 통해서,
             새로운 New Vision과 Value 찾아가는데 노력을 하고 있습니다.
             언제든지 AI/DT전문가의 능력이 필요하면 연락주세요.</p>

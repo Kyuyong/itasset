@@ -2,12 +2,7 @@ import React from 'react';
 import { Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-
-function MiddleNavbar(onCategorySelect) {
-
-
-
-
+function CustomNavbar() {
   return (
     <div className="middle-navbar">
       <Nav variant="pills" defaultActiveKey="/home">
@@ -45,4 +40,4 @@ function MiddleNavbar(onCategorySelect) {
   );
 }
 
-export default MiddleNavbar;
+export default CustomNavbar;

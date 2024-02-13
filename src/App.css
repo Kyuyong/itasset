@@ -228,11 +228,10 @@ input::placeholder {
   max-width: 1600px;
   margin: 0 auto;
   background: #F9F9F9;
-  /* 가운데 정렬을 위해 좌우 마진을 자동으로 설정 */
 }
 
 .main-box {
-  height: 550px;
+  height: 400px;
   width: 100%;
 }
 
@@ -246,39 +245,24 @@ input::placeholder {
   border: 1px solid #e2e2e2;
 }
 
-/* .main-navbar {
-  z-index: 2;
-  background-color: transparent;
-
-} */
-
-/* .main-nav {
-  color: white;
-  font-family: "Noto Sans KR", Helvetica;
-  font-size: 14px;
-  font-weight: 400;
-  margin: 15px;
-} */
 
 .main-box .main-bg {
   background: linear-gradient(100deg, rgb(41, 162, 208) 0%, rgb(119, 47, 201) 100%);
-  height: 600px;
+  height: 500px;
   left: 0;
   position: absolute;
   top: 0;
   width: 100%;
-  /* z-index: -1; */
 
 }
 
 .main-img {
-  height: 600px;
-  width: 50%;
-  top: 50px;
+  height: 400px;
+  width: 45%;
+  top: -20px;
   margin-left: 300px;
   position: relative;
 }
-
 
 
 .logo {
@@ -290,14 +274,13 @@ input::placeholder {
 }
 
 .logo:hover {
-  /* color: #0021E5; */
   font-size: 45px;
   color: #3f3f3f
 }
 
 .main-text {
   padding: 10px;
-  margin-top: 100px;
+  margin-top: 40px;
   /* height: 100%; */
   width: 100%;
   position: relative;
@@ -310,9 +293,6 @@ input::placeholder {
   font-weight: 100;
   font-size: 36px;
 }
-
-
-
 
 
 .vertical-center {
@@ -332,7 +312,7 @@ input::placeholder {
 }
 
 
-/* 직군별 중간 선택 navbar */
+/* 직군별 중간 선택  middle-navbar */
 
 .middle-navbar {
   height: 70px;
@@ -341,7 +321,7 @@ input::placeholder {
   border-radius: 20px;
   left: 0;
   position: relative;
-  top: -60px;
+  top: -10px;
   width: 1600px;
   font-size: 14px;
   font-family: "Noto Sans KR", Helvetica;
@@ -398,18 +378,6 @@ input::placeholder {
   height: 100%;
   text-align: center;
 }
-
-
-/* 
-.middle-navbar .nav-link.active {
-  color: #585858;
-  background-color: white;
-  border-radius: 20px;
-}
-
-.middle-navbar .nav-link {
-  color: white;
-} */
 
 
 .title-text {
@@ -757,6 +725,8 @@ input::placeholder {
 .product-container {
   max-width: 1200px;
   margin: 0 auto;
+  position: relative;
+  top: 50px;
   /* 가운데 정렬을 위해 좌우 마진을 자동으로 설정 */
 }
 
@@ -816,7 +786,7 @@ input::placeholder {
 
 .product-contentsbox {
   width: 1600px;
-  top: -100px;
+  top: 100px;
   border-radius: 30px;
   background: #FFF;
   box-shadow: 3px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -842,6 +812,24 @@ input::placeholder {
 
 
 /* ======== introduction 정의 ======== */
+
+
+.introduction-main-box {
+  height: 600px;
+  width: 100%;
+}
+
+.introduction-main-text {
+  padding: 10px;
+  margin-top: 150px;
+  /* height: 100%; */
+  width: 100%;
+  position: relative;
+  color: white;
+
+}
+
+
 
 .introduction-contentsbox {
   width: 1600px;
@@ -979,9 +967,9 @@ input::placeholder {
   color: #fff;
   border: none;
   border-radius: 50%;
-  font-size: 18px;
-  width: 50px;
-  height: 50px;
+  font-size: 26px;
+  width: 80px;
+  height: 80px;
   cursor: pointer;
   transition: background-color 0.3s, opacity 0.3s;
   display: flex;

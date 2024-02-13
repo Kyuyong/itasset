@@ -1,6 +1,6 @@
 import { Container, Row, Col } from 'react-bootstrap';
-import MainContents from '../components/MainContents';
-import MiddleNavbar from '../components/MiddleNavbar';
+// import MainContents from '../components/MainContents';
+// import MiddleNavbar from '../components/MiddleNavbar';
 import SolutionBox from '../components/SolutionBox';
 
 
@@ -10,9 +10,9 @@ const RM = (props) => {
   return (
     <div>
       <Container className="main-container">
-        <MainContents />
-        <MiddleNavbar />
-        <div className="gap-60" />
+        {/* <MainContents />
+        <MiddleNavbar /> */}
+        <div className="gap-20" />
         <div className="title-text">RM AI/DT Solution</div>
         <div className="gap-20" />
         <div>

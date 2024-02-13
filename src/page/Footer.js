@@ -3,7 +3,8 @@ import { Container, Row, Col, Nav } from 'react-bootstrap';
 
 function Footer() {
   const footerStyle = {
-    backgroundColor: '#333333', color: 'white', textAlign: 'center', padding: '20px 0'
+    backgroundColor: '#333333', color: 'white',
+    textAlign: 'center', padding: '20px 0'
   };
 
   return (
