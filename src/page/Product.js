@@ -2,10 +2,10 @@
 import { useParams } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
 import { BsFillStarFill } from 'react-icons/bs';
-import SolutionBox from '../components/SolutionBox';
+// import SolutionBox from '../components/SolutionBox';
+import ProductContent from '../components/ProductContent';
 
-
-import { Row, Col, Button, Image } from 'react-bootstrap';
+import { Row, Col, Button } from 'react-bootstrap';
 
 const Product = (props) => {
   let { id } = useParams();
@@ -16,8 +16,8 @@ const Product = (props) => {
 
 
   // 3개의 랜덤 아이디를 추출
-  const randomIds = getRandomIds(props.sol_data, 3);
-  const filteredData = props.sol_data.filter(item => randomIds.includes(item.id));
+  // const randomIds = getRandomIds(props.sol_data, 3);
+  // const filteredData = props.sol_data.filter(item => randomIds.includes(item.id));
 
   return (
 
@@ -42,7 +42,7 @@ const Product = (props) => {
                               alt="github-mark" />
                           </span>
                           <span>
-                            <a href={findItem.url}  > Go to System</a>
+                            <a href={findItem.url} style={{ marginLeft: "10px" }}>시스템 바로가기</a>
                           </span>
                         </Button>
                         <Button variant="outline-light product-btn">
@@ -52,7 +52,7 @@ const Product = (props) => {
                               alt="github-mark" />
                           </span>
                           <span>
-                            <a href={findItem.github_url}  > GitHub Code</a>
+                            <a href={findItem.github_url} style={{ marginLeft: "10px" }}  > GitHub Code</a>
                           </span>
                         </Button>
                       </span>
@@ -65,7 +65,6 @@ const Product = (props) => {
                   <p className="product-title">{findItem.sol_name}</p>
                   <p className="product-title-fullname">{findItem.sol_full_name}</p>
                   <p className="product-titlekr">{findItem.kor_name}</p>
-                  {/* <p>{findItem.team} {findItem.developer}</p> */}
                   <div className="gap-20" />
                   <div>
                     <BsFillStarFill style={{ color: '#EFC42D', margin: '2px' }}></BsFillStarFill>
@@ -78,7 +77,7 @@ const Product = (props) => {
                   <hr />
                   <div style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}>
                     <span>
-                      <Button variant="light product-btn">Reviews</Button>
+                      <Button variant="light product-btn">Reviews 보기</Button>
                     </span>
                   </div>
                 </div>
@@ -87,6 +86,8 @@ const Product = (props) => {
           </div>
         </div>
 
+        <ProductContent sol_data={props.sol_data} />
+        {/* 
         <div className="product-contentsbox">
           <div className="product-contentcontainer">
             <Row>
@@ -209,7 +210,7 @@ const Product = (props) => {
               </Col>
             ))}
           </Row>
-        </div>
+        </div> */}
 
 
       </Container>
@@ -218,8 +219,8 @@ const Product = (props) => {
   );
 };
 // 배열에서 랜덤으로 특정 개수의 요소를 추출하는 함수
-function getRandomIds(array, size) {
-  const shuffled = array.sort(() => 0.5 - Math.random());
-  return shuffled.slice(0, size).map(item => item.id);
-}
+// function getRandomIds(array, size) {
+//   const shuffled = array.sort(() => 0.5 - Math.random());
+//   return shuffled.slice(0, size).map(item => item.id);
+// }
 export default Product;

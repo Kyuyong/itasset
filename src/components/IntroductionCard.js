@@ -19,8 +19,7 @@ function IntroductionCard(props) {
                   developer looking to create an admin dashboard that is developer-friendly, rich with features, and
                   highly customisable, here is your match. Our innovative MUI &amp; React dashboard comes with a
                   beautiful design inspired by Google&#39;s Material Design and it will help you create stunning
-                  websites &amp; web apps to delight your clients.Material Dashboard 2 React is our newest free MUI Admin Template based on React. If you’re a
-                  developer looking to create an admin dashboard that is developer-friendly</p>
+                  websites </p>
               </div>
             </div>
           </div>

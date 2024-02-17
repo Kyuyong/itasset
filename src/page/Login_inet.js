@@ -1,20 +1,29 @@
 import React, { useState } from 'react';
-import accountList from '../json/acountlist.json';
-
 
 const Login = ({ onLogin }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [loginError, setLoginError] = useState(false);
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-    const accountExists =
-      accountList.some(account => account.id === username && account.password === password);
 
-    if (accountExists) {
+    // Example API call (URL and parameters need to be adjusted based on i-net specs)
+    const response = await fetch('https://i-net.skons.co.kr/MobileLogin', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        // Additional headers as required by i-net
+      },
+      body: JSON.stringify({
+        loginId: username,
+        Pwd: password, // Ensure this is sent securely and as per i-net requirements
+      }),
+    });
+    const data = await response.json();
+
+    if (response.ok && data.loginResult === 'Success') { // Adjust based on actual API response structure
       onLogin(true);
-      setLoginError(false);
     } else {
       setLoginError(true);
     }
@@ -54,7 +63,7 @@ const Login = ({ onLogin }) => {
             </div>
             {loginError && <div className="errorMessageWrap">로그인 정보가 올바르지 않습니다.</div>}
             <div>
-              <button className="bottomButton" type="submit">로그인</button>
+              <button className="bottomButton" type="submit">로그인 Test 중 </button>
             </div>
           </form>
         </div>

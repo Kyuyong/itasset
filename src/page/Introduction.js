@@ -1,9 +1,15 @@
 import { Container, Row, Col } from 'react-bootstrap';
 import IntroductionCard from '../components/IntroductionCard';
+import { useEffect } from 'react';
+
 
 
 const Introduction = (props) => {
   const sol_data = props.sol_data;
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div>
