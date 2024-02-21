@@ -20,21 +20,13 @@ const ProductContent = (props) => {
     <>
 
       <div className="product-contentsbox">
-        <div className="product-contentcontainer">
+        <div className="product-contentContainer">
           <Row>
             <Col md={8}>
               <div>
                 <div className="gap-60"></div>
                 <h2>Product description</h2>
-                <div className="gap-40"></div>
-                <h4>배경 및 목적</h4>
-                <p>
-                  Material Dashboard 2 React is our newest free MUI Admin Template based on React.
-                  If you’re a developer looking to create an admin dashboard that is developer-friendly,
-                  rich with features, and highly customisable,
-                  here is your match. Our innovative MUI & React dashboard comes with a beautiful design inspired by Google's Material Design
-                  and it will help you create stunning websites & web apps to delight your clients.
-                </p>
+
               </div>
               <div>
                 <div className="gap-40"></div>
@@ -147,6 +139,7 @@ const ProductContent = (props) => {
                 solName={item.sol_name}
                 solFullName={item.sol_full_name}
                 korName={item.kor_name}
+                url={item.url}
               />
             </Col>
           ))}

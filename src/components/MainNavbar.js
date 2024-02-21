@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { BsLockFill } from 'react-icons/bs';
+import { BsLockFill, BsGearFill } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
 
 const MainNavBar = ({ onLogout }) => {
   const [scrolled, setScrolled] = useState(false);
@@ -20,10 +21,17 @@ const MainNavBar = ({ onLogout }) => {
         <div className="c-navbar-logo">
           <a href="/">IT Asset</a>
         </div>
-        <div className="c-navbar-logout" onClick={onLogout}>
-          <BsLockFill size={24} />
-          <i className="fas fa-sign-out-alt"></i>
-          Logout
+
+        <div className="c-navbar-controls">
+          <Link to="/registersolution" className="c-navbar-menu">
+            <BsGearFill size={24} />
+            <span>Setting</span>
+          </Link>
+          <div className="c-navbar-menu" onClick={onLogout}>
+            <BsLockFill size={24} />
+            <span>Logout</span>
+          </div>
+
         </div>
       </div>
     </nav>

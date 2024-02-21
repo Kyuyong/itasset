@@ -46,6 +46,7 @@ function Recommend(props) {
                 solName={sol_data[0].sol_name}
                 solFullName={sol_data[0].sol_full_name}
                 korName={sol_data[0].kor_name}
+                url={sol_data[0].url}
               />
             </Col>
             <Col md={6}>
@@ -54,6 +55,7 @@ function Recommend(props) {
                 solName={sol_data[1].sol_name}
                 solFullName={sol_data[1].sol_full_name}
                 korName={sol_data[1].kor_name}
+                url={sol_data[1].url}
               />
             </Col>
           </Row>
@@ -64,6 +66,7 @@ function Recommend(props) {
                 solName={sol_data[3].sol_name}
                 solFullName={sol_data[3].sol_full_name}
                 korName={sol_data[3].kor_name}
+                url={sol_data[3].url}
               />
             </Col>
             <Col md={6}>
@@ -72,6 +75,7 @@ function Recommend(props) {
                 solName={sol_data[4].sol_name}
                 solFullName={sol_data[4].sol_full_name}
                 korName={sol_data[4].kor_name}
+                url={sol_data[4].url}
               />
             </Col>
           </Row>
@@ -107,6 +111,7 @@ function Recommend(props) {
                   solName={sol_data[2].sol_name}
                   solFullName={sol_data[2].sol_full_name}
                   korName={sol_data[2].kor_name}
+                  url={sol_data[2].url}
                 />
               </Col>
               <Col md={6}>
@@ -115,6 +120,7 @@ function Recommend(props) {
                   solName={sol_data[3].sol_name}
                   solFullName={sol_data[3].sol_full_name}
                   korName={sol_data[3].kor_name}
+                  url={sol_data[3].url}
                 />
               </Col>
             </Row>
@@ -125,6 +131,7 @@ function Recommend(props) {
                   solName={sol_data[9].sol_name}
                   solFullName={sol_data[9].sol_full_name}
                   korName={sol_data[9].kor_name}
+                  url={sol_data[9].url}
                 />
               </Col>
               <Col md={6}>
@@ -133,6 +140,7 @@ function Recommend(props) {
                   solName={sol_data[7].sol_name}
                   solFullName={sol_data[7].sol_full_name}
                   korName={sol_data[7].kor_name}
+                  url={sol_data[7].url}
                 />
               </Col>
             </Row>

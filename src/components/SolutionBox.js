@@ -2,7 +2,6 @@ import { Row, Col, Image } from 'react-bootstrap';
 
 const SolutionBox = ({ id, solName, solFullName, korName, url }) => {
   return (
-
     <div className="solution-img">
       <img src={process.env.PUBLIC_URL + "/image/solution/solution" + id + ".png"} alt="newsolution-box" />
       <div className="overlay-icons">
@@ -10,7 +9,7 @@ const SolutionBox = ({ id, solName, solFullName, korName, url }) => {
           <Row>
             <Col md={3}></Col>
             <Col md={3}>
-              <a href={url}>
+              <a href={url} target="_blank" rel="noopener noreferrer" style={{ cursor: 'pointer' }}>
                 <Image src={process.env.PUBLIC_URL + "/image/icons/live_preview.png"} alt="solution-link" />
                 <p style={{ color: "white" }}>바로가기</p>
               </a>

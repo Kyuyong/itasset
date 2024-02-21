@@ -40,7 +40,7 @@ a {
 
 .c-navbar.scrolled .c-navbar-logo,
 .c-navbar.scrolled .c-navbar-logo a,
-.c-navbar.scrolled .c-navbar-logout {
+.c-navbar.scrolled .c-navbar-menu {
   color: var(--blue-color);
 }
 
@@ -71,12 +71,20 @@ a {
 }
 
 
-.c-navbar-logout {
+.c-navbar-menu {
   cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 4px;
+  color: white;
+}
+
+.c-navbar-controls {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  /* 로그아웃과 설정 사이의 간격 */
 }
 
 
@@ -99,6 +107,7 @@ a {
 
 .login-leftside {
   position: relative;
+  background-position: center;
   background-image: url(/public/image/login/loginSide.png);
   background-size: cover;
   display: flex;
@@ -794,7 +803,7 @@ input::placeholder {
 }
 
 
-.product-contentcontainer {
+.product-contentContainer {
   max-width: 1400px;
   margin: 0 auto;
   /* 가운데 정렬을 위해 좌우 마진을 자동으로 설정 */
@@ -809,6 +818,150 @@ input::placeholder {
   width: 200px;
   margin: 50px;
 }
+
+.product-ReviewboxContainer {
+  max-width: 1200px;
+  margin: 10px auto;
+  background-color: #ffffff;
+}
+
+.product-ReviewBox {
+  background-color: #edf9ff;
+  box-shadow: 3px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  min-height: 100px;
+  height: 100%;
+  margin: 20px auto;
+  padding: 20px;
+
+}
+
+.product-scored {
+  background-color: #f3f3f3;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.box-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.reviewHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.reviewHeader>div,
+.reviewDate {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.reviewNm {
+  font-size: 20px;
+  font-weight: 500;
+  padding-left: 10px;
+
+}
+
+.reviewNm,
+.reviewTeam,
+.reviewDate {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.reviewTeam {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--blue-color);
+}
+
+.reviewDate {
+  font-size: 14px;
+  padding-right: 10px;
+}
+
+.reviewContent {
+  background-color: #ffffff;
+  padding: 20px;
+  min-height: 80px;
+  border-radius: 10px;
+}
+
+.reviewActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+
+}
+
+.reviewActions-btn {
+  width: 100px;
+  font-size: 14px;
+  font-weight: 200;
+  color: var(--gray-color);
+  /* 초기 글자색 투명 설정 */
+  background-color: transparent;
+  /* 배경색 투명 설정 */
+  border: none;
+  /* 테두리 없음 */
+  display: flex;
+  align-items: center;
+  /* 아이콘과 글자 세로 중앙 정렬 */
+  gap: 5px;
+  /* 아이콘과 글자 사이 간격 */
+}
+
+.reviewActions-btn:hover {
+  color: var(--blue-color);
+  /* 마우스 오버 시 글자색 파란색으로 변경 */
+  background-color: transparent;
+  /* 마우스 오버 시 배경색 유지 */
+}
+
+.commentForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.commentInput {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: flex-end;
+  /* 버튼을 오른쪽으로 정렬 */
+}
+
+.submitBtn {
+  padding: 8px 16px;
+  background-color: var(--blue-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submitBtn:hover {
+  background-color: darkblue;
+}
+
+
 
 
 /* ======== introduction 정의 ======== */
@@ -981,12 +1134,29 @@ input::placeholder {
   background-color: #2980b9;
 }
 
+/* ===================register======================== */
+
+
+.register-box {
+  height: 90px;
+  width: 100%;
+}
+
+.register-box .register-bg {
+  background: linear-gradient(100deg, rgb(41, 162, 208) 0%, rgb(119, 47, 201) 100%);
+  height: 90px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+
+}
+
+/* ===================register end======================== */
 
 
 
 
-
-/* =============================================================== */
 
 
 

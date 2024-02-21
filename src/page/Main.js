@@ -8,7 +8,8 @@ import ScrollToTop from '../components/ScrollToTop';
 // Page List
 import Home from './Home';
 import Product from './Product';
-import Footer from '../page/Footer'
+import Footer from './Footer'
+import RegisterSolution from './RegisterSolution';
 
 import Introduction from './Introduction';
 
@@ -21,6 +22,7 @@ const Main = ({ onLogout }) => {
   const showHome =
     !location.pathname.startsWith('/product')
     && !location.pathname.startsWith('/introduction')
+    && !location.pathname.startsWith('/registersolution')
 
 
   return (
@@ -31,6 +33,7 @@ const Main = ({ onLogout }) => {
         <Routes>
           <Route path="/product/:id" element={<Product sol_data={solutionData} />} />
           <Route path="/introduction" element={<Introduction sol_data={solutionData} />}></Route>
+          <Route path="/registersolution" element={<RegisterSolution />} />
         </Routes>
 
         <ScrollToTop />
